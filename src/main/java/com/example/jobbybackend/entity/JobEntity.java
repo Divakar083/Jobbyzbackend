@@ -1,0 +1,89 @@
+package com.example.jobbybackend.entity;
+
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "jobs")
+public class JobEntity {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
+    private String jobCategory;
+    private String job;
+    private String company;
+    private String experience;
+    private String location;
+    private String salary; // Ensure this is String
+    private String joblink;
+
+
+    // Getters and Setters
+
+    public long getId() {
+        return id;
+    }
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getJobCategory() {
+        return jobCategory;
+    }
+
+    public void setJobCategory(String jobCategory) {
+        this.jobCategory = jobCategory;
+    }
+
+    public String getJob() {
+        return job;
+    }
+
+    public void setJob(String job) {
+        this.job = job;
+    }
+
+    public String getCompany() {
+        return company;
+    }
+
+    public void setCompany(String company) {
+        this.company = company;
+    }
+
+    public String getExperience() {
+        return experience;
+    }
+
+    public void setExperience(String experience) {
+        this.experience = experience;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public String getSalary() {
+        return salary;
+    }
+
+    public void setSalary(String salary) {
+        this.salary = salary;
+    }
+
+    public String getJoblink() {
+        return joblink;
+    }
+
+    public void setJoblink(String joblink) {
+        this.joblink = joblink;
+    }
+    @Override
+    public String toString() {
+        return "JobEntity [id=" + id + ", jobCategory=" + jobCategory + ", job=" +job + ", company=" + company + ", experience=" + experience + ", location=" + location + ", salary=" + salary + ", joblink=" + joblink + "]";
+    }
+
+}
